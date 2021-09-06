@@ -13,7 +13,7 @@
     });
 
     function ResetItem() {
-        $("#CategoryID").val("");
+        $("#CategoryID").val("1");
         $("#ItemCode").val("");
         $("#ItemName").val("");
         $("#Description").val("");
@@ -24,6 +24,7 @@
     function SaveItem() {
         var formData = new FormData();
         formData.append("CategoryID", $("#CategoryID").val());
+        formData.append("ItemCode", $("#ItemCode").val());
         formData.append("ItemCode", $("#ItemCode").val());
         formData.append("ItemName", $("#ItemName").val());
         formData.append("Description", $("#Description").val());
@@ -97,8 +98,8 @@
     </div>
 
     <div>
-        <input type="button" value="Save" name="save" class="btn btn-primary" id="btnSave"/>
+        <input type="button" value="Save" name="save" class="btn btn-primary m-md-2 col-1" id="btnSave"/>
         &nbsp;
-        <input type="button" value="Reset" name="reset" class="btn btn-danger" />
+        <input type="button" value="Reset" name="reset" class="btn btn-danger col-1" />
     </div>
 </div>
